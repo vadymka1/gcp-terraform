@@ -23,7 +23,7 @@ module "compute_vpc_network" {
 }
 
 module "compute_firewall" {
-    source = "../modules/compute_firewall"
+    source = "./modules/compute_firewall"
     network_name = "${var.network_name}"
 }
 

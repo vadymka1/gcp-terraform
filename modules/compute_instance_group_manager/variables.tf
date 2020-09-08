@@ -10,6 +10,11 @@ variable "base_instance_name" {
 }
 
 variable "http_port" {
-    description = "Default source image"
-    default = "ubuntu-os-cloud/ubuntu-minimal-1804-lts"
+    description = "Default http port"
+    default = "80"
+}
+
+variable "ssh_port" {
+    description = "Default ssh port"
+    default = "22"
 }

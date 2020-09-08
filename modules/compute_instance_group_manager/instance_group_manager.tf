@@ -7,12 +7,12 @@ resource "google_compute_instance_group_manager" "dev-instance-group"{
 
     named_port {
         name = "http"
-        port = "80"
+        port = "${var.http_port}"
     }
 
     named_port {
         name = "ssh"
-        port = "20"
+        port = "${var.ssh_port}"
     }
 
 
