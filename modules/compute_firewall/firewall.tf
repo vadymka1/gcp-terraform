@@ -4,6 +4,6 @@ resource "google_compute_firewall" "dev-firewall-rule" {
 
     allow {
         protocol = "tcp"
-        ports = "22"
+        ports = ["22"]
     }
 } 

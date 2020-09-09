@@ -1,9 +1,14 @@
 resource "google_compute_instance_group_manager" "dev-instance-group"{
     name = "${var.name}"
-    instance_template  = "${var.instance_template}"
+    # instance_template  = "${var.instance_template}"
     base_instance_name = "${var.base_instance_name}"
     zone               = "${var.zone}"
     target_size        = "1"
+
+    version {
+        instance_template  = "${var.instance_template}"
+    }
+
 
     named_port {
         name = "http"

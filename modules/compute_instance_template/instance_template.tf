@@ -11,6 +11,7 @@ resource "google_compute_instance_template" "dev_instance_template" {
 
     network_interface {
         network = "${var.network_name}"
+        subnetwork = "${var.subnet_name}"
     }
 
     can_ip_forward = true

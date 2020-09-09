@@ -18,3 +18,12 @@ variable "ssh_port" {
     description = "Default ssh port"
     default = "22"
 }
+
+variable "zone" {
+    description = "Project default zone"
+}
+
+variable "instance_template" {
+    # type = stringname
+    description = "Template name"
+}

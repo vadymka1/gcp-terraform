@@ -13,3 +13,12 @@ variable "source_image" {
     description = "Default source image"
     default = "ubuntu-os-cloud/ubuntu-minimal-1804-lts"
 }
+
+variable "network_name" {
+    description = "VPC name"
+}
+
+variable "subnet_name" {
+    description = "subnetwork name"
+    default = "dev-subnet"
+}
