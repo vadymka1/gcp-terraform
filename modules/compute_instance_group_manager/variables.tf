@@ -27,3 +27,7 @@ variable "instance_template" {
     # type = stringname
     description = "Template name"
 }
+
+variable "autoscaler" {
+    default = "dev-autoscaler"
+}

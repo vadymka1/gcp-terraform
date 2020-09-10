@@ -12,7 +12,6 @@ resource "google_compute_target_http_proxy" "target_http_proxy" {
 }
 
 resource "google_compute_backend_service" "dev-backendservice" {
-  # region = "us-central1"
   name = "${var.backend_name}"
   health_checks         = [google_compute_health_check.healthcheck_name.id]
   
@@ -20,8 +19,10 @@ resource "google_compute_backend_service" "dev-backendservice" {
   protocol                = "HTTP"
 
   backend {
-      # group = "${var.group}"
-      group = "${var.group_id}"
+      group = "${var.group_name}"
+      # group = "${replace(element(var.group_id, 1), "Manager", "")}"
+      # group = "${var.instance_group}"
+      # group = "${var.self_link_group}"
   }
 }
 

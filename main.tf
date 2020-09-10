@@ -47,4 +47,6 @@ module "compute_loadbalancer" {
     project_name = "${var.project_name}"
     group = "${module.compute_instance_group_manager.name}"
     group_id = "${module.compute_instance_group_manager.id}"
+    instance_group = "${module.compute_instance_group_manager.instance_group}"
+    self_link_group = "${module.compute_instance_group_manager.self_link}"
 }

@@ -32,3 +32,16 @@ variable "group" {
 variable "group_id" {
   description = "Group id"
 }
+
+variable "instance_group" {
+  description = "instance_group id"
+}
+
+variable "self_link_group" {
+  description = "instance_group id"
+}
+
+variable "group_name" {
+  default = "projects/vadim-fedorenko-internship/zones/us-central1-c/instanceGroups/dev-instance-group"
+}
+
